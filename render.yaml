@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: cch-agency-staff-tracking
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: SMARTSHEET_TOKEN
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: npm_config_yes
+        value: "true"
